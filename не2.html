@@ -1,0 +1,63 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>notcountries | date & time</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<style>
+body {
+background-color: #333;
+color: #fff;
+font-family: 'Athelas', serif;
+text-align: center;
+}
+
+.header {
+background-color: #555;
+border: 1px solid white;
+}
+
+.footer {
+background-color: #555;
+border: 1px solid white;
+}
+
+#clock {
+ font-size: 3.5rem;
+ align: 0;
+ margin: 0
+ }
+ 
+ img {
+   margin-top: 15
+ }
+
+</style>
+</head>
+<body>
+<div class="header">
+<img src=" https://im.wampi.ru/2024/10/21/BEZ-NAZVANIY1_20241021142253.png    " alt="civ_logo" border="0" width=125>
+<h1>civ. | date & time</h1>
+</div>
+<h3><i>Текущее время и дата во вселенной civitasium:</p></i><br> •~•~•~•~•~• <br> <p id="clock"></p>
+<br> •~•~•~•~•~•
+<br> <br>
+<script>const StartDate = new Date('2024-10-20T00:00:00Z');
+const Secondate = new Date('1938-01-01T00:00:00Z');
+
+function updateClock() {
+const now = new Date();
+const elapsed = now.getTime() - StartDate.getTime();
+const virtualTime = new Date(Secondate.getTime() + (elapsed * 5));
+const virtualTimeString = virtualTime.toISOString().replace('T', ' ').replace(/\.\d+Z/, '').replace(/-/g, '.');
+document.getElementById('clock').innerHTML = virtualTimeString;}
+
+setInterval(updateClock, 1);
+</script>
+
+<div class="footer">
+<p>&copy; 2024 notcoutries. </p></div>
+
+</body>
+</html>
