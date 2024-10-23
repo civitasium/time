@@ -49,7 +49,7 @@ const Secondate = new Date('1938-01-01T00:00:00Z');
 function updateClock() {
 const now = new Date();
 const elapsed = now.getTime() - StartDate.getTime();
-const virtualTime = new Date(Secondate.getTime() + (elapsed * 5));
+const virtualTime = new Date(Secondate.getTime() + (elapsed * 10));
 const virtualTimeString = virtualTime.toISOString().replace('T', ' ').replace(/\.\d+Z/, '').replace(/-/g, '.');
 document.getElementById('clock').innerHTML = virtualTimeString;}
 
